@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome FIRST(icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/LOG.png">
+    <title>YELVO Colours (PTY) LTD</title>
+    <!--custom fonts link from servers-->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+      <!-- LOGO + BRAND TEXT TOGETHER -->
+
+      <a href="index.html" class="nav-brand">
+        <img src="images/logo.png" alt="Yelvo Logo" class="logo-img-circle">
+        <div class="brand-text">
+          YELVO Colours<br>(PTY) LTD
+        </div>
+      </a>
+
+
+      <!-- VISIBLE LINKS -->
+  <div class="nav-short">
+    <a href="index.html">Home</a>
+    <a href="Services.html">Services</a>
+    <a href="About.html">About</a>
+  </div>
+
+
+    <!--HUMBUGER BUTTON-->
+    <button class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button> 
+
+
+    <!--DROPDOWN MENU-->
+    <div class="nav-links" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="Services.html">Services</a>
+      <a href="About.html">About</a>
+      <a href="Why Us.html">Why Choose Us</a>
+      <a href="Reviews.html">Reviews</a>
+      <a href="Contacts.html">Contact</a>
+      <a href="Feedback.html">Feedback</a>
+      <a href="Contacts.html" class="btn-quote">Get a Quote</a>
+    </div>
+  </nav>
+
+
+  <!-- HUMBUGER SCRIPT MOBILE NAV -->
+  <script> 
+  document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('open');
+      });
+    });
+  });
+</script>
+
+
+  <!-- HERO — full viewport text block -->
+  <section class="hero">
+    <p class="hero-tag">Get in Touch</p>
+    <h1>Request a<br><span>Free Quote</span></h1>
+    <p class="hero-sub">Fill in the form and our team will get back to you within 24 hours. You can also reach us directly via phone, WhatsApp, or email.</p>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span>Fill the form below</span>
+    </div>
+  </section>
+ 
+  <!-- FORM SECTION -->
+  <section class="form-section">
+    <div class="form-header">
+      <p class="eyebrow">Your Details</p>
+      <h2>Tell us about your project</h2>
+      <p>We'll prepare a tailored quote and get back to you within one business day.</p>
+    </div>
+ 
+    <form id="quoteForm">
+      <div class="form-grid">
+ 
+        <div class="form-group">
+          <label for="fullname">Full Name <span class="req">*</span></label>
+          <input type="text" id="fullname" placeholder="Your name" required >
+        </div>
+ 
+        <div class="form-group">
+          <label for="phone">Phone Number <span class="req">*</span></label>
+          <input type="tel" id="phone" placeholder="+267 xxxxxxxx" required >
+        </div>
+ 
+        <div class="form-group full">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="your@email.com" >
+        </div>
+ 
+        <div class="form-group full">
+          <label>Service Type <span class="req">*</span></label>
+ 
+          <!-- Hidden real select for form value -->
+          <select id="service" name="service" required tabindex="-1" aria-hidden="true">
+            <option value="">Select a services...</option>
+          </select>
+ 
+          <!-- Custom dropdown -->
+          <div class="custom-select" id="customSelect">
+            <div class="custom-select-trigger" tabindex="0" id="selectTrigger">
+              <span id="selectDisplay">Select a service...</span>
+              <span class="chevron">&#9662;</span>
+            </div>
+            <div class="custom-dropdown" id="customDropdown">
+ 
+              <div class="dropdown-group-label">Painting Services</div>
+              <div class="dropdown-option" data-value="Color Consultation">Color Consultation</div>
+              <div class="dropdown-option" data-value="Interior Painting">Interior Painting</div>
+              <div class="dropdown-option" data-value="Exterior Painting">Exterior Painting</div>
+              <div class="dropdown-option" data-value="Roof Painting">Roof Painting</div>
+              <div class="dropdown-option" data-value="Floor Painting">Floor Painting</div>
+              <div class="dropdown-option" data-value="Decorations">Decorations</div>
+ 
+              <div class="dropdown-group-label">Renovation Services</div>
+              <div class="dropdown-option" data-value="Tiling">Tiling</div>
+              <div class="dropdown-option" data-value="Kitchen Remodeling">Kitchen Remodeling</div>
+              <div class="dropdown-option" data-value="Bathroom Remodeling">Bathroom Remodeling</div>
+              <div class="dropdown-option" data-value="Waterproofing">Waterproofing</div>
+              <div class="dropdown-option" data-value="Ceilings">Ceilings</div>
+              <div class="dropdown-option" data-value="Repairs">Repairs</div>
+ 
+            </div>
+          </div>
+        </div>
+ 
+        <div class="form-group full">
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Tell us about your project..."></textarea>
+        </div>
+ 
+      </div>
+ 
+      <button type="submit" class="btn-submit">
+        Request Free Quote
+        <span class="btn-arrow">&#8594;</span>
+      </button>
+    </form>
+  </section>
+ 
+  <!-- THANK YOU OVERLAY -->
+  <div class="thankyou-overlay" id="thankyouOverlay">
+    <div class="thankyou-card">
+      <span class="thankyou-emoji">&#127881;</span>
+      <h2>Thank you! We'll be in touch soon.</h2>
+      <p>Our team will review your request and contact you within 24 hours.</p>
+      <button class="btn-close" onclick="closeOverlay()">Back to Home</button>
+    </div>
+  </div>
+ 
+  
+    <footer>
+
+        <!--LOGO-->
+        <div class="footer-logo">
+        <img src="images/logo.png" alt="YELVO Colours Logo" class="logo-img-footer">
+        </div>  
+
+<!--SERVICES-->
+        <div class="services">
+            <h2>Services</h2>
+            <p>House Painting</p>
+            <p>Renovations</p>
+            <p>Repairs</p>
+        </div>
+
+<!--quik links-->        
+        <div class="quick-links">
+            <h2>Quick Links</h2>
+            <a href="index.html">Home<br></a>
+            <a href="About.html">About Us<br></a>
+            <a href="Feedback.html">Feedback<br></a>
+            <a href="Contact.html">Get a Quote<br></a>
+        </div>
+
+         <!-- CONTACT -->
+    <div class="footer-column">
+      <h2>Contact</h2>
+      <p>
+        <a href="https://mail.google.com/mail/?view=cm&to=yelvocolours@gmail.com&su=Hello&body=Hi%20there" target="_blank">
+          <i class="fas fa-envelope"></i> yelvocolours@gmail.com
+        </a>
+      </p>
+      <p>
+        <a href="tel:+26771755700">
+          <i class="fas fa-phone"></i> 71755700
+        </a>
+      </p>
+      <p>
+        <a href="https://wa.me/26772331545" target="_blank">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </p>
+    </div>
+
+    <!-- SOCIALS -->
+    <div class="footer-socials">
+      <a href="https://www.facebook.com/YelvoColours" target="_blank">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://www.google.com/maps?q=-24.661417,25.898056" target="_blank">
+        <i class="fas fa-map-marker-alt"></i>
+      </a>
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+      <p>&copy; 2026 YELVO Colours (PTY) LTD - All rights reserved</p>
+    </div>
+
+  </footer>
+
+<script>
+    /* -- Custom Select Logic -- */
+    const customSelect = document.getElementById('customSelect');
+    const trigger      = document.getElementById('selectTrigger');
+    const display      = document.getElementById('selectDisplay');
+    const realSelect   = document.getElementById('service');
+    const options      = document.querySelectorAll('.dropdown-option');
+ 
+    trigger.addEventListener('click', () => {
+      customSelect.classList.toggle('open');
+    });
+ 
+    trigger.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        customSelect.classList.toggle('open');
+      }
+      if (e.key === 'Escape') customSelect.classList.remove('open');
+    });
+ 
+    options.forEach(option => {
+      option.addEventListener('click', () => {
+        const value = option.getAttribute('data-value');
+ 
+        display.textContent = value;
+        trigger.classList.add('has-value');
+ 
+        /*-- Sync hidden select--*/
+        let opt = realSelect.querySelector('option[value="' + value + '"]');
+        if (!opt) {
+          opt = document.createElement('option');
+          opt.value = value;
+          opt.textContent = value;
+          realSelect.appendChild(opt);
+        }
+        realSelect.value = value;
+ 
+        options.forEach(o => o.classList.remove('selected'));
+        option.classList.add('selected');
+ 
+        customSelect.classList.remove('open');
+        trigger.style.borderColor = '';
+        trigger.style.boxShadow = '';
+      });
+    });
+ 
+    document.addEventListener('click', (e) => {
+      if (!customSelect.contains(e.target)) {
+        customSelect.classList.remove('open');
+      }
+    });
+ 
+    /* -- Form Submit -- */
+    document.getElementById('quoteForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      if (!realSelect.value) {
+        trigger.style.borderColor = '#e05a5a';
+        trigger.style.boxShadow = '0 0 0 3px rgba(224,90,90,0.15)';
+        trigger.focus();
+        return;
+      }
+      document.getElementById('thankyouOverlay').classList.add('visible');
+    });
+ 
+    /* -- Thank You Overlay -- */
+    function closeOverlay() {
+      document.getElementById('thankyouOverlay').classList.remove('visible');
+      document.getElementById('quoteForm').reset();
+      display.textContent = 'Select a service...';
+      trigger.classList.remove('has-value');
+      trigger.style.borderColor = '';
+      trigger.style.boxShadow = '';
+      options.forEach(o => o.classList.remove('selected'));
+      realSelect.value = '';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+ 
+    document.getElementById('thankyouOverlay').addEventListener('click', function(e) {
+      if (e.target === this) closeOverlay();
+    });
+  </script>
+
+</body>
+</html>

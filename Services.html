@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome FIRST(icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="images/LOG.png">
+
+    <title>SERVICES | YELVO Colours (PTY) LTD</title>
+
+<style>
+
+    /* =====================
+       RESET & BASE STYLES
+    ===================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #a5a4a4; 
+      color: #535252;
+    }
+
+    /* =====================
+       PAGE WRAPPER
+    ===================== */
+    .services-page {
+      max-width: 1100px;   
+      margin: 0 auto;      
+      padding: 3rem 1.5rem;
+    }
+
+    /* =====================
+       SECTION HEADER
+    ===================== */
+
+    /* Small uppercase label above the title */
+    .section-label {
+      text-align: center;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #5f2c02; /* Brand orange */
+      margin-bottom: 8px;
+    }
+
+    /* Main page heading */
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 0.5rem;
+    }
+
+
+    /* Short intro paragraph below the title */
+    .section-subtitle {
+      text-align: center;
+      font-size: 15px;
+      color: #373535;
+      margin-bottom: 2.5rem;
+      max-width: 580px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* =====================
+       CATEGORY HEADERS
+       (e.g. "Painting Services", "Renovation Services")
+    ===================== */
+    .category-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 17px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin: 2.5rem 0 1.25rem;
+    }
+
+    /* arrow bar accent before each category title */
+    .category-header::before {
+      content: '';
+      display: inline-block;
+      width: 28px;
+      height: 3px;
+      background: #944504;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    /* =====================
+       CARDS GRID LAYOUT
+    ===================== */
+
+    /* Responsive grid — fills columns automatically*/
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  /*=== cards width sizes==*/
+      gap: 18px;
+    }
+
+    /* =====================
+       INDIVIDUAL CARD
+    ===================== */
+    .card {
+      background: #e3e0e0;
+      border: 1px solid #e8e6e0;
+      border-radius: 12px;
+      padding: 1.4rem 1.25rem;
+      display: flex;
+      flex-direction: column; 
+      gap: 10px;
+
+      /* Smooth hover transition */
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      cursor: default;
+    }
+
+    /* Card lifts up and gets an orange border on hover */
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.09);
+      border-color: #e07b2a;
+    }
+
+    /* =====================
+       CARD ICON
+    ===================== */
+    .card-icon {
+      font-size: 24px;
+      line-height: 1;
+      display: inline-block;
+      transition: transform 0.2s ease; 
+    }
+
+    /* Icon scales up slightly when card is hovered */
+    .card:hover .card-icon {
+      transform: scale(1.2);
+    }
+
+    /* =====================
+       CARD TITLE
+    ===================== */
+    .card h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #1a1a1a;
+      transition: color 0.2s ease;
+    }
+
+    /* Title turns orange on hover */
+    .card:hover h3 {
+      color: #e07b2a;
+    }
+
+    /* =====================
+       CARD DESCRIPTION
+    ===================== */
+
+    /* Short paragraph describing the service */
+    .card-desc {
+      font-size: 13px;
+      color: #464545;
+      line-height: 1.6;
+      border-bottom: 1px solid #ff0404; 
+      padding-bottom: 10px;
+    }
+
+    /* =====================
+       CARD FEATURE LIST
+    ===================== */
+    .card ul {
+      list-style: none;
+    }
+
+    /* Each feature item with an orange checkmark */
+    .card ul li {
+      font-size: 13px;
+      color: #1a1919;
+      padding: 3px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 7px;
+      line-height: 1.55;
+    }
+
+    /* checkmark bullet */
+    .card ul li::before {
+      content: '✓';
+      color: #e07b2a;
+      font-size: 12px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* =====================
+       CARD BADGE
+       ("Most popular", "Free consultation")
+    ===================== */
+    .card-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 500;
+      color: #b85e10;
+      background: #fdf0e4;       
+      border: 1px solid #f5d5b0;
+      border-radius: 20px;
+      padding: 3px 10px;
+      margin-top: auto;         
+      align-self: flex-start;
+    }
+
+    /* =====================
+       RESPONSIVE — MOBILE
+    ===================== */
+    @media (max-width: 600px) {
+      .section-title { font-size: 24px; }
+      .cards-grid { grid-template-columns: 1fr; } 
+    }
+
+  </style>
+  </head>
+  <body>
+    <nav>
+      <!-- LOGO + BRAND TEXT TOGETHER -->
+
+      <a href="index.html" class="nav-brand">
+        <img src="images/logo.png" alt="Yelvo Logo" class="logo-img-circle">
+        <div class="brand-text">
+          YELVO Colours<br>(PTY) LTD
+        </div>
+      </a>
+
+      <!-- VISIBLE LINKS -->
+  <div class="nav-short">
+    <a href="index.html">Home</a>
+    <a href="Services.html">Services</a>
+    <a href="About.html">About</a>
+  </div>
+
+
+    <!--HUMBUGER BUTTON-->
+    <button class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button> 
+
+
+    <!--DROPDOWN MENU-->
+    <div class="nav-links" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="Services.html">Services</a>
+      <a href="About.html">About</a>
+      <a href="Why Us.html">Why Choose Us</a>
+      <a href="Reviews.html">Reviews</a>
+      <a href="Contacts.html">Contact</a>
+      <a href="Feedback.html">Feedback</a>
+      <a href="Contacts.html" class="btn-quote">Get a Quote</a>
+    </div>
+  </nav>
+  
+
+<div class="services-page">
+
+  <!-- ========================
+       PAGE HEADER
+  ======================== -->
+  <p class="section-label">What we offer</p>
+  <h1 class="section-title">Our Services</h1>
+  <p class="section-subtitle">We provide professional painting and renovation services tailored to your home or business — quality work, on time and on budget.</p>
+
+
+  <!-- ========================
+       PAINTING SERVICES
+  ======================== -->
+  <div class="category-header">Painting Services</div>
+  <div class="cards-grid">
+
+    <!-- CARD: Color Consultation -->
+    <div class="card">
+      <div class="card-icon">🎨</div>           
+      <h2>Color Consultation</h2>              
+      <!-- Short description of the service -->
+      <p class="card-desc">Not sure which colors work best for your space? Our experts visit your home, assess your lighting, and help you find the perfect palette.</p>
+      <!-- List of features included in this service -->
+      <ul>
+        <li>In-home lighting assessment</li>
+        <li>Full-room palette proposals</li>
+        <li>Digital room color previews</li>
+        <li>Accent &amp; trim color pairings</li>
+      </ul>
+      <span class="card-badge">Free consultation</span>  
+    </div>
+
+    <!-- CARD: Interior Painting -->
+    <div class="card">
+      <div class="card-icon">🖌️</div>
+      <h2>Interior Painting</h2>
+      <p class="card-desc">Transform any room with a fresh coat of paint. We handle everything from prep to final touch-ups, leaving your space spotless.</p>
+      <ul>
+        <li>Full-room color consultation</li>
+        <li>Furniture &amp; floor protection</li>
+        <li>Premium low-VOC paint brands</li>
+        <li>Clean edges and expert cut-ins</li>
+        <li>Same-day touch-up guarantee</li>
+      </ul>
+      <span class="card-badge">Most popular</span>
+    </div>
+
+    <!-- CARD: Exterior Painting -->
+    <div class="card">
+      <div class="card-icon">🏠</div>
+      <h2>Exterior Painting</h2>
+      <p class="card-desc">Boost your home's curb appeal with a durable exterior finish that stands up to the elements and keeps looking great year-round.</p>
+      <ul>
+        <li>Power washing &amp; surface prep</li>
+        <li>Wood rot repair &amp; caulking</li>
+        <li>Weather-resistant topcoats</li>
+        <li>Trim, soffits &amp; fascia painting</li>
+      </ul>
+      <span class="card-badge">5-year warranty</span>
+    </div>
+
+    <!-- CARD: Roof Painting -->
+    <div class="card">
+      <div class="card-icon">🏗️</div>
+      <h2>Roof Painting</h2>
+      <p class="card-desc">Extend the life of your roof with heat-reflective and waterproof coatings that protect against sun, rain, and rust damage.</p>
+      <ul>
+        <li>Heat-reflective coatings</li>
+        <li>Waterproof protection</li>
+        <li>Rust and wear prevention</li>
+      </ul>
+      <span class="card-badge">Long-lasting protection</span>
+    </div>
+
+    <!-- CARD: Floor Painting -->
+    <div class="card">
+      <div class="card-icon">⬛</div>
+      <h3>Floor Painting</h3>
+      <p class="card-desc">Give your floors a clean, professional finish with durable coatings designed to handle heavy foot traffic and daily wear.</p>
+      <ul>
+        <li>Durable coatings</li>
+        <li>Slip-resistant finishes</li>
+        <li>Easy-to-clean surfaces</li>
+      </ul>
+      <span class="card-badge">Residential &amp; commercial</span>
+    </div>
+
+    <!-- CARD: Decorations -->
+    <div class="card">
+      <div class="card-icon">✨</div>
+      <h2>Decorations</h2>
+      <p class="card-desc">Add personality and style to any room with custom accent walls, decorative finishes, and modern design touches that stand out.</p>
+      <ul>
+        <li>Accent walls</li>
+        <li>Custom color finishes</li>
+        <li>Modern decorative designs</li>
+      </ul>
+      <span class="card-badge">Custom designs</span>
+    </div>
+
+  </div><!-- end .cards-grid (Painting) -->
+
+
+  <!-- ========================
+        RENOVATION SERVICES
+  ======================== -->
+  <div class="category-header">Renovation Services</div>
+  <div class="cards-grid">
+
+    <!-- CARD: Tiling -->
+    <div class="card">
+      <div class="card-icon">🔲</div>
+      <h2>Tiling</h2>
+      <p class="card-desc">Professional tile installation for floors and walls, delivering clean, precise results that enhance any room's look and durability.</p>
+      <ul>
+        <li>Floor tiling</li>
+        <li>Wall tiling</li>
+        <li>Neat and precise installation</li>
+      </ul>
+      <span class="card-badge">All tile types</span>
+    </div>
+
+    <!-- CARD: Kitchen Remodeling -->
+    <div class="card">
+      <div class="card-icon"></div>
+      <h2>Kitchen Remodeling</h2>
+      <p class="card-desc">Revamp your kitchen from top to bottom — new cabinets, tiles, countertops, and fixtures for a space you'll love cooking in.</p>
+      <ul>
+        <li>Cabinet painting &amp; refinishing</li>
+        <li>Backsplash tile installation</li>
+        <li>Countertop resurfacing</li>
+        <li>Hardware &amp; fixture updates</li>
+        <li>Open-concept wall removal</li>
+      </ul>
+      <span class="card-badge">Full remodel available</span>
+    </div>
+
+    <!-- CARD: Bathroom Remodeling -->
+    <div class="card">
+      <div class="card-icon">🚿</div>
+      <h2>Bathroom Remodeling</h2>
+      <p class="card-desc">Turn your bathroom into a relaxing retreat with moisture-resistant finishes, restored tiles, and modern fixtures from start to finish.</p>
+      <ul>
+        <li>Moisture-resistant wall coatings</li>
+        <li>Tile &amp; grout restoration</li>
+        <li>Vanity &amp; fixture installation</li>
+        <li>Accent wall treatments</li>
+        <li>Full design-to-finish management</li>
+      </ul>
+      <span class="card-badge">Design included</span>
+    </div>
+
+    <!-- CARD: Waterproofing -->
+    <div class="card">
+      <div class="card-icon">💧</div>
+      <h2>Waterproofing</h2>
+      <p class="card-desc">Protect your property from water damage with professional waterproofing solutions for roofs, walls, and moisture-prone areas.</p>
+      <ul>
+        <li>Roof waterproofing</li>
+        <li>Wall sealing</li>
+        <li>Moisture protection solutions</li>
+      </ul>
+      <span class="card-badge">Guaranteed seal</span>
+    </div>
+
+    <!-- CARD: Ceilings -->
+    <div class="card">
+      <div class="card-icon"></div>
+      <h2>Ceilings</h2>
+      <p class="card-desc">From fresh installations to repairs and stylish modern finishes, we handle all ceiling work with care and precision.</p>
+      <ul>
+        <li>Ceiling installation</li>
+        <li>Ceiling repairs</li>
+        <li>Modern ceiling finishes</li>
+      </ul>
+      <span class="card-badge">Quick turnaround</span>
+    </div>
+
+    <!-- CARD: Repairs -->
+    <div class="card">
+      <div class="card-icon">🔧</div>
+      <h2>Repairs</h2>
+      <p class="card-desc">Keep your property in top shape with our reliable repair service — from minor surface fixes to structural touch-ups and ongoing maintenance.</p>
+      <ul>
+        <li>Structural touch-ups</li>
+        <li>Surface repairs</li>
+        <li>Maintenance work</li>
+      </ul>
+      <span class="card-badge">On-call service</span>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+    <footer>
+
+        <!--LOGO-->
+        <div class="footer-logo">
+        <img src="images/logo.png" alt="YELVO Colours Logo" class="logo-img-footer">
+        </div>  
+
+<!--SERVICES-->
+        <div class="services">
+            <h2>Services</h2>
+            <p>House Painting</p>
+            <p>Renovations</p>
+            <p>Repairs</p>
+        </div>
+
+<!--quik links-->        
+        <div class="quick-links">
+            <h2>Quick Links</h2>
+            <a href="index.html">Home<br></a>
+            <a href="About.html">About Us<br></a>
+            <a href="Feedback.html">Feedback<br></a>
+            <a href="Contact.html">Get a Quote<br></a>
+        </div>
+
+         <!-- CONTACT -->
+    <div class="footer-column">
+      <h2>Contact</h2>
+      <p>
+        <a href="https://mail.google.com/mail/?view=cm&to=yelvocolours@gmail.com&su=Hello&body=Hi%20there" target="_blank">
+          <i class="fas fa-envelope"></i> yelvocolours@gmail.com
+        </a>
+      </p>
+      <p>
+        <a href="tel:+26771755700">
+          <i class="fas fa-phone"></i> 71755700
+        </a>
+      </p>
+      <p>
+        <a href="https://wa.me/26772331545" target="_blank">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </p>
+    </div>
+
+    <!-- SOCIALS -->
+    <div class="footer-socials">
+      <a href="https://www.facebook.com/YelvoColours" target="_blank">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://www.google.com/maps?q=-24.661417,25.898056" target="_blank">
+        <i class="fas fa-map-marker-alt"></i>
+      </a>
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+      <p>&copy; 2026 YELVO Colours (PTY) LTD - All rights reserved</p>
+    </div>
+
+  </footer>
+
+<!-- HUMBUGER SCRIPT MOBILE NAV -->
+  <script> 
+  document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('open');
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

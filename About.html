@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome FIRST(icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="images/LOGO.png">
+
+   <title>Who We Are | YELVO Colours</title>
+
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #adadb4;
+      color: #1a1a1a;
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .left .label {
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #915d03;
+      margin-bottom: 16px;
+    }
+
+    .left h2 {
+      font-size: 42px;
+      font-weight: 800;
+      line-height: 1.15;
+      color: #1a1a1a;
+      margin-bottom: 24px;
+    }
+
+    .left p {
+      font-size: 16px;
+      line-height: 1.75;
+      color: #2e2c2c;
+      margin-bottom: 18px;
+    }
+
+    .right {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .card {
+      background: #dde3fa;
+      border-radius: 14px;
+      padding: 20px 24px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .card-icon {
+      font-size: 28px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .card-body h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 6px;
+    }
+
+    .card-body p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #242323;
+    }
+
+    .card {
+  background: #ccd4e7;
+  border-radius: 14px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+    @media (max-width: 768px) {
+      .section {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 50px 24px;
+      }
+      .left h2 { font-size: 30px; }
+    }
+  </style>
+
+</head>
+<body>
+    <nav>
+      <!-- LOGO + BRAND TEXT TOGETHER -->
+
+      <a href="index.html" class="nav-brand">
+        <img src="images/logo.png" alt="Yelvo Logo" class="logo-img-circle">
+        <div class="brand-text">
+          YELVO Colours<br>(PTY) LTD
+        </div>
+      </a>
+      
+
+<!-- VISIBLE LINKS -->
+  <div class="nav-short">
+    <a href="index.html">Home</a>
+    <a href="Services.html">Services</a>
+    <a href="About.html">About</a>
+  </div>
+
+
+    <!--HUMBUGER BUTTON-->
+    <button class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button> 
+
+
+    <!--DROPDOWN MENU-->
+    <div class="nav-links" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="Services.html">Services</a>
+      <a href="About.html">About</a>
+      <a href="Why Us.html">Why Choose Us</a>
+      <a href="Reviews.html">Reviews</a>
+      <a href="Contacts.html">Contact</a>
+      <a href="Feedback.html">Feedback</a>
+      <a href="Contacts.html" class="btn-quote">Get a Quote</a>
+    </div>
+  </nav>
+
+
+
+<section class="section">
+
+  <div class="left">
+    <p class="label">Who We Are</p>
+    <h1>A Trusted Name in Painting &amp; Renovations</h1>
+    <p>YELVO Colours (PTY) LTD is a trusted name in house painting and home renovations, proudly based in Gaborone and operating countrywide. We combine skilled craftsmanship with premium materials to deliver results that stand the test of time.</p>
+    <p>Whether you need a single room repainted or a complete home transformation, our experienced team is committed to exceeding your expectations on every project.</p>
+  </div>
+
+  <div class="right">
+
+    <div class="card">
+      <div class="card-icon">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="36" height="36" rx="8" fill="#4caf7d"/>
+          <polyline points="10,19 15,24 26,13" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="card-body">
+        <h2>Do the Job Right</h2>
+        <p>We never cut corners. Every project receives the same level of care and professionalism.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🏆</div>
+      <div class="card-body">
+        <h2>Use the Right Materials</h2>
+        <p>We source only premium, proven paints and materials for finishes that last.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🎯</div>
+      <div class="card-body">
+        <h2>Deliver Results That Last</h2>
+        <p>Our work is built to endure — beautiful today, durable for years to come.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!--process-->
+<section class="process-section">
+  <p class="process-label">Our Process</p>
+  <h2 class="process-title">How It Works</h2>
+
+  <div class="steps-wrapper">
+    <div class="connector-line"></div>
+
+    <div class="step">
+      <div class="step-circle">01</div>
+      <p class="step-heading">Free Estimate</p>
+      <p class="step-desc">We visit your home, assess the project, and provide a detailed written estimate — no obligations.</p>
+    </div>
+
+    <div class="step">
+      <div class="step-circle">02</div>
+      <p class="step-heading">Color Consultation</p>
+      <p class="step-desc">Our consultants help you choose the perfect palette with digital previews and physical samples.</p>
+    </div>
+
+    <div class="step">
+      <div class="step-circle">03</div>
+      <p class="step-heading">Expert Execution</p>
+      <p class="step-desc">Our licensed team arrives on time, protects your belongings, and completes the work to the highest standard.</p>
+    </div>
+
+    <div class="step">
+      <div class="step-circle">04</div>
+      <p class="step-heading">Final Walkthrough</p>
+      <p class="step-desc">We do a thorough walkthrough and address any touch-ups before collecting payment.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+    <footer>
+
+        <!--LOGO-->
+        <div class="footer-logo">
+        <img src="images/logo.png" alt="YELVO Colours Logo" class="logo-img-footer">
+        </div>  
+
+<!--SERVICES-->
+        <div class="services">
+            <h2>Services</h2>
+            <p>House Painting</p>
+            <p>Renovations</p>
+            <p>Repairs</p>
+        </div>
+
+<!--quik links-->        
+        <div class="quick-links">
+            <h2>Quick Links</h2>
+            <a href="index.html">Home<br></a>
+            <a href="About.html">About Us<br></a>
+            <a href="Feedback.html">Feedback<br></a>
+            <a href="Contact.html">Get a Quote<br></a>
+        </div>
+
+         <!-- CONTACT -->
+    <div class="footer-column">
+      <h2>Contact</h2>
+      <p>
+        <a href="https://mail.google.com/mail/?view=cm&to=yelvocolours@gmail.com&su=Hello&body=Hi%20there" target="_blank">
+          <i class="fas fa-envelope"></i> yelvocolours@gmail.com
+        </a>
+      </p>
+      <p>
+        <a href="tel:+26771755700">
+          <i class="fas fa-phone"></i> 71755700
+        </a>
+      </p>
+      <p>
+        <a href="https://wa.me/26772331545" target="_blank">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </p>
+    </div>
+
+    <!-- SOCIALS -->
+    <div class="footer-socials">
+      <a href="https://www.facebook.com/YelvoColours" target="_blank">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://www.google.com/maps?q=-24.661417,25.898056" target="_blank">
+        <i class="fas fa-map-marker-alt"></i>
+      </a>
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+      <p>&copy; 2026 YELVO Colours (PTY) LTD - All rights reserved</p>
+    </div>
+
+  </footer>
+
+  <!-- HUMBUGER SCRIPT MOBILE NAV -->
+  <script> 
+  document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('open');
+      });
+    });
+  });
+
+</script>
+
+</body>
+</html>

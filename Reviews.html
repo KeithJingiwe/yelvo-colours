@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome FIRST(icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="images/LOG.png">
+
+   <title>Reviews | YELVO Colours (PTY) LTD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reviews.css">
+</head>
+<body>
+    <nav>
+      <!-- LOGO + BRAND TEXT TOGETHER -->
+
+      <a href="index.html" class="nav-brand">
+        <img src="images/logo.png" alt="Yelvo Logo" class="logo-img-circle">
+        <div class="brand-text">
+          YELVO Colours<br>(PTY) LTD
+        </div>
+      </a>
+      
+
+      <!-- VISIBLE LINKS -->
+  <div class="nav-short">
+    <a href="index.html">Home</a>
+    <a href="Services.html">Services</a>
+    <a href="About.html">About</a>
+  </div>
+
+
+    <!--HUMBUGER BUTTON-->
+    <button class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button> 
+
+
+    <!--DROPDOWN MENU-->
+    <div class="nav-links" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="Services.html">Services</a>
+      <a href="About.html">About</a>
+      <a href="Why Us.html">Why Choose Us</a>
+      <a href="Reviews.html">Reviews</a>
+      <a href="Contacts.html">Contact</a>
+      <a href="Feedback.html">Feedback</a>
+      <a href="Contacts.html" class="btn-quote">Get a Quote</a>
+    </div>
+  </nav>
+
+
+  <section class="reviews-section">
+    <div class="section-label">HAPPY CUSTOMERS</div>
+    <h1 class="section-title">What Our Clients Say</h1>
+
+    <div class="reviews-grid">
+
+      <div class="review-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">"YELVO Colours transformed our home completely. The team was professional, on time, and the finish is absolutely stunning. Highly recommend!"</p>
+        <div class="reviewer">
+          <span class="reviewer-name">Sarah P.</span>
+          <span class="reviewer-role">Homeowner</span>
+        </div>
+      </div>
+
+      <div class="review-card featured">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">"We had our roof painted and waterproofed. Not a single leak since! Great workmanship and very affordable. Will definitely use again."</p>
+        <div class="reviewer">
+          <span class="reviewer-name">James M.</span>
+          <span class="reviewer-role">Property Owner</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">"The tiling work they did in our kitchen and bathroom was superb. Precise, clean, and completed on schedule. Exceptional service from start to finish."</p>
+        <div class="reviewer">
+          <span class="reviewer-name">Lerato N.</span>
+          <span class="reviewer-role">Homeowner</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+    
+    <footer>
+
+        <!--LOGO-->
+        <div class="footer-logo">
+        <img src="images/logo.png" alt="YELVO Colours Logo" class="logo-img-footer">
+        </div>  
+
+<!--SERVICES-->
+        <div class="services">
+            <h2>Services</h2>
+            <p>House Painting</p>
+            <p>Renovations</p>
+            <p>Repairs</p>
+        </div>
+
+<!--quick links-->        
+        <div class="quick-links">
+            <h2>Quick Links</h2>
+            <a href="index.html">Home<br></a>
+            <a href="About.html">About Us<br></a>
+            <a href="Feedback.html">Feedback<br></a>
+            <a href="Contact.html">Get a Quote<br></a>
+        </div>
+
+         <!-- CONTACT -->
+    <div class="footer-column">
+      <h2>Contact</h2>
+      <p>
+        <a href="https://mail.google.com/mail/?view=cm&to=yelvocolours@gmail.com&su=Hello&body=Hi%20there" target="_blank">
+          <i class="fas fa-envelope"></i> yelvocolours@gmail.com
+        </a>
+      </p>
+      <p>
+        <a href="tel:+26771755700">
+          <i class="fas fa-phone"></i> 71755700
+        </a>
+      </p>
+      <p>
+        <a href="https://wa.me/26772331545" target="_blank">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </p>
+    </div>
+
+    <!-- SOCIALS -->
+    <div class="footer-socials">
+      <a href="https://www.facebook.com/YelvoColours" target="_blank">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://www.google.com/maps?q=-24.661417,25.898056" target="_blank">
+        <i class="fas fa-map-marker-alt"></i>
+      </a>
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+      <p>&copy; 2026 YELVO Colours (PTY) LTD - All rights reserved</p>
+    </div>
+
+  </footer>
+
+  <!-- HUMBUGER SCRIPT MOBILE NAV -->
+  <script> 
+  document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('open');
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

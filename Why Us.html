@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome FIRST(icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="images/LOG.png">
+
+    <title>WHY CHOOSE US | YELVO Colours (PTY) LTD</title>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: sans-serif; background: #d9cfcf; }
+
+    .yelvo-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      padding: 2rem 1.5rem;
+    }
+
+    .col-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: #3c3d51;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .col-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 20px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 18px;
+      border-radius: 12px;
+      border: 1px solid #e5e5e5;
+      background: #bdb5b5;
+      margin-bottom: 12px;
+      cursor: default;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .feature-item:hover {
+      transform: translateY(-3px) scale(1.01);
+      border-color: #aaa;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.09);
+    }
+
+    .benefit-item {
+      background: #a7a7aa;
+      border-color: #f5e99a;
+    }
+
+    .benefit-item:hover {
+      border-color: #d4b800;
+      box-shadow: 0 6px 18px rgba(180, 150, 0, 0.13);
+    }
+
+    .icon { font-size: 22px; flex-shrink: 0; }
+
+    .item-text { font-size: 15px; color: #222; }
+
+    @media (max-width: 600px) {
+      .yelvo-section { grid-template-columns: 1fr; gap: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+
+    <nav>
+      <!-- LOGO + BRAND TEXT TOGETHER -->
+
+      <a href="index.html" class="nav-brand">
+        <img src="images/logo.png" alt="Yelvo Logo" class="logo-img-circle">
+        <div class="brand-text">
+          YELVO Colours<br>(PTY) LTD
+        </div>
+      </a>
+     
+
+<!-- VISIBLE LINKS -->
+  <div class="nav-short">
+    <a href="index.html">Home</a>
+    <a href="Services.html">Services</a>
+    <a href="About.html">About</a>
+  </div>
+
+
+    <!--HUMBUGER BUTTON-->
+    <button class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button> 
+
+
+    <!--DROPDOWN MENU-->
+    <div class="nav-links" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="Services.html">Services</a>
+      <a href="About.html">About</a>
+      <a href="Why Us.html">Why Choose Us</a>
+      <a href="Reviews.html">Reviews</a>
+      <a href="Contacts.html">Contact</a>
+      <a href="Feedback.html">Feedback</a>
+      <a href="Contacts.html" class="btn-quote">Get a Quote</a>
+    </div>
+  </nav>
+
+
+
+  <div class="yelvo-section">
+    <!-- Left Column -->
+    <div>
+      <div class="col-label">Why choose us</div>
+      <div class="col-title">The YELVO Difference</div>
+      <div class="feature-item"><span class="icon">👷</span><span class="item-text">Skilled and experienced professionals</span></div>
+      <div class="feature-item"><span class="icon">🎨</span><span class="item-text">High-quality materials</span></div>
+      <div class="feature-item"><span class="icon">🔍</span><span class="item-text">Attention to detail</span></div>
+      <div class="feature-item"><span class="icon">⏰</span><span class="item-text">Reliable and timely service</span></div>
+      <div class="feature-item"><span class="icon">💰</span><span class="item-text">Affordable pricing</span></div>
+    </div>
+
+    <!-- Right Column -->
+    <div>
+      <div class="col-label">Benefits</div>
+      <div class="col-title"><h1>What You Gain</h1></div>
+      <div class="feature-item benefit-item"><span class="icon">📈</span><span class="item-text">Increases property value</span></div>
+      <div class="feature-item benefit-item"><span class="icon">🛡️</span><span class="item-text">Protects surfaces from damage</span></div>
+      <div class="feature-item benefit-item"><span class="icon">🔒</span><span class="item-text">Prevents costly future repairs</span></div>
+      <div class="feature-item benefit-item"><span class="icon">🏠</span><span class="item-text">Enhances comfort and aesthetics</span></div>
+      <div class="feature-item benefit-item"><span class="icon">⌛</span><span class="item-text">Extends the lifespan of your home</span></div>
+    </div>
+  </div>
+
+    
+    <footer>
+
+        <!--LOGO-->
+        <div class="footer-logo">
+        <img src="images/logo.png" alt="YELVO Colours Logo" class="logo-img-footer">
+        </div>  
+
+<!--SERVICES-->
+        <div class="services">
+            <h2>Services</h2>
+            <p>House Painting</p>
+            <p>Renovations</p>
+            <p>Repairs</p>
+        </div>
+
+<!--quik links-->        
+        <div class="quick-links">
+            <h2>Quick Links</h2>
+            <a href="index.html">Home<br></a>
+            <a href="About.html">About Us<br></a>
+            <a href="Feedback.html">Feedback<br></a>
+            <a href="Contact.html">Get a Quote<br></a>
+        </div>
+
+         <!-- CONTACT -->
+    <div class="footer-column">
+      <h2>Contact</h2>
+      <p>
+        <a href="https://mail.google.com/mail/?view=cm&to=yelvocolours@gmail.com&su=Hello&body=Hi%20there" target="_blank">
+          <i class="fas fa-envelope"></i> yelvocolours@gmail.com
+        </a>
+      </p>
+      <p>
+        <a href="tel:+26771755700">
+          <i class="fas fa-phone"></i> 71755700
+        </a>
+      </p>
+      <p>
+        <a href="https://wa.me/26772331545" target="_blank">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </p>
+    </div>
+
+    <!-- SOCIALS -->
+    <div class="footer-socials">
+      <a href="https://www.facebook.com/YelvoColours" target="_blank">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://www.google.com/maps?q=-24.661417,25.898056" target="_blank">
+        <i class="fas fa-map-marker-alt"></i>
+      </a>
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+      <p>&copy; 2026 YELVO Colours (PTY) LTD - All rights reserved</p>
+    </div>
+
+  </footer>
+
+  <!-- HUMBUGER SCRIPT MOBILE NAV -->
+  <script> 
+  document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('open');
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
